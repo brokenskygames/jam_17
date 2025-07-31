@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
-run/main_scene="uid://cu5unj6420n1t"
+config/name="Jam 17"
+run/main_scene="uid://c1okr2og6im2w"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -1,7 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://cji255yyfahnu"]
+[gd_scene load_steps=22 format=3 uid="uid://cji255yyfahnu"]
 
 [ext_resource type="Script" uid="uid://c37y8fr67lypq" path="res://entities/player/player.gd" id="1_abrql"]
 [ext_resource type="Texture2D" uid="uid://cwdifnw1bwanj" path="res://assets/art/player/place_holder.png" id="1_symyc"]
+[ext_resource type="Texture2D" uid="uid://c25fejgv1b4lk" path="res://assets/art/player/angel_basic_primer_boceto.png" id="2_sglur"]
+[ext_resource type="Script" uid="uid://btvgsrojh8vfo" path="res://entities/player/camera_2d.gd" id="4_bls4j"]
 
 [sub_resource type="Animation" id="Animation_sglur"]
 length = 0.001
@@ -123,11 +125,22 @@ states/run/position = Vector2(594, 100)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_fkugw"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_8fjmc"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_qiwj3"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_26q78"), "jump", "idle", SubResource("AnimationNodeStateMachineTransition_bectd"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_wvtmh"), "jump", "run", SubResource("AnimationNodeStateMachineTransition_abrql")]
 graph_offset = Vector2(-249.847, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
-size = Vector2(24, 48)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abrql"]
+radius = 14.0
+height = 34.0
 
 [node name="Player" type="CharacterBody2D"]
+floor_constant_speed = true
+floor_block_on_wall = false
+floor_max_angle = 1.0472
+floor_snap_length = 0.0
 script = ExtResource("1_abrql")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-15, 14)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_sglur")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_symyc")
@@ -148,7 +161,11 @@ parameters/conditions/is_jumping = false
 parameters/conditions/is_running = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 16)
-shape = SubResource("RectangleShape2D_abrql")
+position = Vector2(1, 15)
+shape = SubResource("CapsuleShape2D_abrql")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -500
+limit_top = -1000
+limit_bottom = 430
+script = ExtResource("4_bls4j")

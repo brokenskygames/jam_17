@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dd4kbmxjkwlqg"
+path="res://.godot/imported/Trouble I Hardly Know Her - Hustle Loop.ogg-3af0da4a1c340c66b3be3e0fa131600c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Trouble I Hardly Know Her - Hustle Loop.ogg"
+dest_files=["res://.godot/imported/Trouble I Hardly Know Her - Hustle Loop.ogg-3af0da4a1c340c66b3be3e0fa131600c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

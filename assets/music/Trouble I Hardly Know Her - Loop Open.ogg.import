@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4p81ohyxstke"
+path="res://.godot/imported/Trouble I Hardly Know Her - Loop Open.ogg-0a30baed3ea4f7830b624d5d49ca9841.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Trouble I Hardly Know Her - Loop Open.ogg"
+dest_files=["res://.godot/imported/Trouble I Hardly Know Her - Loop Open.ogg-0a30baed3ea4f7830b624d5d49ca9841.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
