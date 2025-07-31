@@ -25,6 +25,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 254.0
+offset_right = 254.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -74,10 +76,10 @@ text = "Quit"
 
 [node name="Label1" type="Label" parent="UI/Control"]
 layout_mode = 0
-offset_left = 102.0
-offset_top = 108.0
-offset_right = 365.0
-offset_bottom = 441.0
+offset_left = -158.0
+offset_top = 134.0
+offset_right = 105.0
+offset_bottom = 467.0
 text = "Ruin
 "
 label_settings = SubResource("LabelSettings_2plxb")
@@ -86,14 +88,24 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="UI/Control"]
 layout_mode = 0
-offset_left = 670.0
-offset_top = 92.0
-offset_right = 1204.0
-offset_bottom = 257.0
+offset_left = -36.0
+offset_top = 136.0
+offset_right = 498.0
+offset_bottom = 301.0
 text = "Run"
 label_settings = SubResource("LabelSettings_2plxb")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="UI/Control"]
+layout_mode = 0
+offset_left = -143.0
+offset_top = 321.0
+offset_right = 241.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 35
+text = "You Only have 1 second 
+to escape the Emptiness"
 
 [node name="ControlMenu" type="CanvasLayer" parent="."]
 unique_name_in_owner = true

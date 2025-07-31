@@ -97,8 +97,7 @@ func _on_sequence_timer_timeout() -> void:
 		print("Time ran out!")
 		input_index = 0
 		update_ui()
-		
+		sequence_label.text = "[FAILED] Time ran out!\n" + sequence_label.text
 		await get_tree().create_timer(1.5).timeout  # Optional pause
 		sequence_label.visible = false
 		player_inside = false
-		get_tree().change_scene_to_file("res://UI/died.tscn")

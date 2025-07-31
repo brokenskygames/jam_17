@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp76r2onogy6y"]
+[gd_scene load_steps=4 format=3 uid="uid://b7lwsij0mvbc3"]
 
-[ext_resource type="Script" uid="uid://g67xcj248hea" path="res://entities/quick/quick_time.gd" id="1_6d1qv"]
-[ext_resource type="Script" uid="uid://02mubjap7otj" path="res://entities/quick/node_2d.gd" id="2_ehso6"]
+[ext_resource type="Script" uid="uid://g67xcj248hea" path="res://entities/quick/quick_time.gd" id="1_44p71"]
+[ext_resource type="Script" uid="uid://b562h7tp1x5g2" path="res://entities/quick/node_2d_dead.gd" id="2_3i6on"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehso6"]
 radius = 192.003
@@ -13,7 +13,7 @@ gravity_point_center = Vector2(0, 0)
 gravity_direction = Vector2(0, 0)
 gravity = 0.0
 angular_damp = 100.0
-script = ExtResource("1_6d1qv")
+script = ExtResource("1_44p71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 modulate = Color(0.0415139, 0.547504, 0.561249, 1)
@@ -52,11 +52,11 @@ text = "test"
 horizontal_alignment = 1
 
 [node name="SequenceTimer" type="Timer" parent="."]
-wait_time = 3.0
+one_shot = true
 
 [node name="Node2D" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0.592157)
-script = ExtResource("2_ehso6")
+script = ExtResource("2_3i6on")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
